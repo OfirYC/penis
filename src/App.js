@@ -1,7 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    // OFIR set ofir, EDEN set eden
+    localStorage.setItem("ofir", "Penis in your butt");
+
+    const edenStorage = localStorage.getItem("eden");
+    const ofirStorage = localStorage.getItem("ofir");
+
+    alert(`Eden: ${edenStorage} Ofir: ${ofirStorage}`);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
